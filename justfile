@@ -16,7 +16,7 @@ check:
 
 # Format Nix files (requires nixpkgs-fmt to be added)
 fmt:
-    nixpkgs-fmt .
+    nixpkgs-fmt . || echo "formatter failed, skipping formatting nix files"
 
 
 # check if the repo is dirty (fails if any non-commited changes are pushed)
